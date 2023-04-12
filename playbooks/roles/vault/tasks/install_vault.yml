@@ -1,0 +1,36 @@
+---
+
+- name: Verify is vault is installed
+  shell: vault status
+  register: vault_exists
+  failed_when: false
+
+- name: Creates directory
+  file:
+    path: /tmp/vault/data
+    state: directory
+
+- name: Creates directory
+  file:
+    path: /tmp/vault/config
+    state: directory
+
+- name: Download binary
+  get_url:
+    url: https://releases.hashicorp.com/vault/{{vault_version}}/vault_{{vault_version}}_linux_amd64.zip
+    dest: /tmp/vault_{{vault_version}}_linux_amd64.zip
+    mode: 0755
+  register: vault_download
+
+- name: Unzip vault archive
+  unarchive:
+    src: "{{ vault_download.dest }}"
+    dest: /usr/local/bin
+    copy: no
+    mode: 0755
+
+- name: "Set vault binary capabilities"
+  capabilities:
+    path: /usr/local/bin/vault
+    capability: cap_ipc_lock+ep
+    state: present
