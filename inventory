@@ -1,6 +1,6 @@
 203.0.113.111
-203.0.113.112 ansible_sudo_pass=ilegra ansible_ssh_user=ilegra
-203.0.113.113 ansible_sudo_pass=root ansible_ssh_user=root
+203.0.113.112 ansible_sudo_pass=ilegra ansible_ssh_pass=ilegra
+203.0.113.113 ansible_sudo_pass=root ansible_ssh_pass=root
 localhost
 
 [all:vars]
