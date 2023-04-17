@@ -30,6 +30,7 @@ jenkins@localhost
 203.0.113.131 ansible_connection=local ansible_host=localhost ansible_ssh_pass=ilegra
 203.0.113.132 ansible_connection=local ansible_host=127.0.0.1 ansible_ssh_pass=ilegra
 203.0.113.133 ansible_connection=local ansible_host=127.0.0.1
+203.0.113.119 ansible_host=localhost ansible_user=ilegra ansible_password=ilegra ansible_sudo_pass=ilegra
 
 [local]
 # 192.168.33.1 ansible_ssh_user=ilegra ansible_ssh_host=localhost
