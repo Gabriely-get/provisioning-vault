@@ -1,7 +1,7 @@
 #203.0.113.111
 #203.0.113.112 ansible_sudo_pass=ilegra ansible_ssh_pass=ilegra
 #203.0.113.113 ansible_sudo_pass=root ansible_ssh_pass=root
-jenkins@localhost
+localhost remote_user=jenkins
 
 [all:vars]
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
