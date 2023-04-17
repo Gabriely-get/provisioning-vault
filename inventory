@@ -1,7 +1,7 @@
 #203.0.113.111
 #203.0.113.112 ansible_sudo_pass=ilegra ansible_ssh_pass=ilegra
 #203.0.113.113 ansible_sudo_pass=root ansible_ssh_pass=root
-localhost ansible_user=jenkins
+jenkins@localhost
 
 
 #[teste]
@@ -42,7 +42,8 @@ localhost ansible_user=jenkins
 # 203.0.113.115 ansible_connection=ssh ansible_ssh_pass=ilegra
 # 192.168.15.80 ansible_connection=ssh ansible_ssh_host=localhost
 
-server1 ansible_host=localhost ansible_user=ilegra ansible_password=ilegra 
+server1 ansible_host=localhost ansible_user=ilegra ansible_password=ilegra ansible_sudo_pass=ilegra
+server6 ansible_host=localhost ansible_user=ilegra ansible_password=ilegra ansible_sudo_pass=root
 #server2 ansible_host=203.0.113.115
 #server3 ansible_host=203.0.113.116
 #server4 ansible_host=localhost
