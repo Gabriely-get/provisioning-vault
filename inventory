@@ -8,35 +8,25 @@ jenkins@localhost
 # teste ansible_ssh_host=192.168.32.11 ansible_ssh_port=22 ansible_user=jenkins
 
    #127.0.0.1
-192.168.15.78 ansible_connection=local
+#192.168.15.78 ansible_connection=local
    #203.0.113.111
 #server_hostname
   #192.168.33.100 ansible_ssh_pass=vagrant ansible_ssh_user=vagrant
 #192.168.33.100 ansible_ssh_pass=root ansible_ssh_user=root
 #192.168.33.141 ansible_ssh_pass=ilegra ansible_ssh_user=ilegra
-192.168.33.140 ansible_ssh_pass=jenkins ansible_ssh_user=jenkins
+#192.168.33.140 ansible_ssh_pass=jenkins ansible_ssh_user=jenkins
 #192.168.33.101 ansible_ssh_host=localhost ansible_connection=ssh
  #203.0.113.120 ansible_ssh_user=ilegra ansible_ssh_host=localhost
  #203.0.113.121 ansible_connection=ssh ansible_ssh_pass=ilegra
  #203.0.113.122 ansible_connection=ssh ansible_ssh_pass=root
  #203.0.113.123 ansible_connection=ssh ansible_ssh_pass=jenkins
 
-203.0.113.124 ansible_connection=local ansible_ssh_pass=ilegra ansible_sudo_pass=ilegra
-203.0.113.134 ansible_ssh_pass=jenkins ansible_sudo_pass=jenkins
-203.0.113.136 ansible_ssh_pass=root ansible_sudo_pass=root
-203.0.113.127 ansible_connection=local ansible_ssh_host=localhost
-203.0.113.129 ansible_connection=local ansible_ssh_host=localhost ansible_ssh_pass=ilegra ansible_sudo_pass=ilegra
-203.0.113.130 ansible_connection=local ansible_host=localhost 
-203.0.113.131 ansible_connection=local ansible_host=localhost ansible_ssh_pass=ilegra
-203.0.113.132 ansible_connection=local ansible_host=127.0.0.1 ansible_ssh_pass=ilegra
-203.0.113.133 ansible_connection=local ansible_host=127.0.0.1
 203.0.113.119 ansible_host=localhost ansible_user=ilegra ansible_password=ilegra ansible_sudo_pass=ilegra
 
 [local]
 # 192.168.33.1 ansible_ssh_user=ilegra ansible_ssh_host=localhost
-
- 192.168.15.75 ansible_connection=local ansible_ssh_pass=ilegra
- 203.0.113.117 ansible_connection=local ansible_ssh_pass=ilegra
+ 192.168.15.75 ansible_user=ilegra ansible_password=ilegra ansible_sudo_pass=ilegra
+ #203.0.113.117 ansible_connection=local ansible_ssh_pass=ilegra
 
 # 192.168.15.76 ansible_connection=ssh ansible_ssh_pass=root
 # 192.168.15.77 ansible_connection=ssh ansible_ssh_pass=jenkins
