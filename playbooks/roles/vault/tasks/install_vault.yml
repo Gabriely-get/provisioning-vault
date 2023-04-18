@@ -1,7 +1,7 @@
 ---
 
 - name: Verify is vault is installed
-  shell: vault status
+  shell: vault
   register: vault_exists
   failed_when: false
 
