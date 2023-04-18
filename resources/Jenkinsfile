@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Start Vault') {
             steps {
-                sh 'vault server -config=config-vault.hcl'}
+                sh 'vault server -config=resources/config-vault.hcl'}
             }
         }
     
