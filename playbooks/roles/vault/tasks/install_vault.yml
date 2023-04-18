@@ -9,7 +9,7 @@
   file:
     path: /usr/local/share/vault/data
     state: directory
-    mode: 0755
+    mode: 0777
   become: yes
 
 - name: Creates directory
