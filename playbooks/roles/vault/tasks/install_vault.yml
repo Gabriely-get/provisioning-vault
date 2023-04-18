@@ -9,6 +9,7 @@
   file:
     path: /opt/vault/data
     state: directory
+  become: yes
 
 - name: Creates directory
   file:
