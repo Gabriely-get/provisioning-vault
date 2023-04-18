@@ -7,8 +7,9 @@
 
 - name: Creates directory
   file:
-    path: /tmp/vault/data
+    path: /usr/local/share/vault/data
     state: directory
+  become: yes
 
 - name: Creates directory
   file:

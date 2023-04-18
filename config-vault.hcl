@@ -1,5 +1,5 @@
 storage "file" {
-  path    = "/tmp/vault/data"
+  path    = "/usr/local/share/vault/data"
 }
 
 listener "tcp" {
