@@ -12,11 +12,6 @@
     mode: 0777
   become: yes
 
-- name: Creates directory
-  file:
-    path: /tmp/vault/config
-    state: directory
-
 - name: Download binary
   get_url:
     url: https://releases.hashicorp.com/vault/{{vault_version}}/vault_{{vault_version}}_linux_amd64.zip
