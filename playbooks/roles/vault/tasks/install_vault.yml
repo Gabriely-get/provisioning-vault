@@ -7,7 +7,7 @@
 
 - name: Creates directory
   file:
-    path: /tmp/vault/data
+    path: /opt/vault/data
     state: directory
 
 - name: Creates directory
