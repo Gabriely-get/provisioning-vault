@@ -11,6 +11,7 @@
     state: directory
     mode: 0777
   become: yes
+  when: "'not found' in vault_exists.stderr"
 
 - name: Download binary
   get_url:
@@ -18,6 +19,7 @@
     dest: /tmp/vault_{{vault_version}}_linux_amd64.zip
     mode: 0755
   register: vault_download
+  when: "'not found' in vault_exists.stderr"
 
 - name: Unzip vault archive
   unarchive:
@@ -25,9 +27,11 @@
     dest: /usr/local/bin
     copy: no
     mode: 0755
+  when: "'not found' in vault_exists.stderr"
 
 - name: "Set vault binary capabilities"
   capabilities:
     path: /usr/local/bin/vault
     capability: cap_ipc_lock+ep
     state: present
+  when: "'not found' in vault_exists.stderr"
