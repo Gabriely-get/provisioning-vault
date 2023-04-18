@@ -10,7 +10,7 @@ pipeline {
             steps {
                 ansiblePlaybook(
                 playbook: 'playbooks/playbook.yml',
-                inventory: 'inventory',
+                inventory: 'resources/inventory',
                 extras: '-e vault_version="$VAULT_VERSION"')
             }
         }
